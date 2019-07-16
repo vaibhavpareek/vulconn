@@ -11,7 +11,7 @@ Hardware Requirements to Run this tool fluently in your system.
 
 Software Requirements to Run this tool fluently in your system.
 
-    Python3 should be installed in your system.if not then install by sudo apt-get install python3.7(or latest)
+    Python3 should be installed in your system.if not then install by apt-get install python3.7(or latest)
     Import some packages in python3.
         URLLIB(if not by default) - pip3 install urllib3
         Sqlite3(if not by default) - pip3 install sqlite3
