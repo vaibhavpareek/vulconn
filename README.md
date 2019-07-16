@@ -1,7 +1,5 @@
 # vulconn
-[+]Check Site Connectivity Through This  tool.
-[+]It will help you know about the alive websites among your dataset.
-[+]It will allow to upload file in any text format ,also csv files are allowed to be uploaded.
+Check Site Connectivity Through This  tool.It will help you know about the alive websites among your dataset.It will allow to upload file in any text format ,also csv files are allowed to be uploaded.
 
 Hardware Requirements to Run this tool fluently in your system.
 
@@ -30,3 +28,4 @@ How to run this tool :
     Now everything is fine and good to go.
     Just run the vulconn file by python3 vulconn.py
     And enjoy the experience with fresh new tool build in python for people interested in cyber security.
+![image](https://user-images.githubusercontent.com/37809497/61267142-411ecc00-a7b4-11e9-82b3-23ade2cd1e9a.png)
