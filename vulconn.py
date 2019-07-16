@@ -74,6 +74,11 @@ while(True):
 	menu()
 	ch = int(input(" >> Choice : "))
 	if(ch==1):
+		system("clear")
+		print("\033[1;33;48m")
+		ascii_banner = pyfiglet.figlet_format("Check Single URL")
+		print(ascii_banner)
+		print("\033[1;36;48m")
 		conn = sqlite3.connect("websitedata.db")
 		host = input(">> Enter host name : ")
 		try:
@@ -110,6 +115,11 @@ while(True):
 				else:
 					timer = 1
 	elif(ch==2):
+		system("clear")
+		print("\033[1;33;48m")
+		ascii_banner = pyfiglet.figlet_format("Upload TEXT File")
+		print(ascii_banner)
+		print("\033[1;36;48m")
 		conn = sqlite3.connect("websitedata.db")				
 		host = input(">> Enter File Path : ")
 		l = open(host,"r")
@@ -154,6 +164,11 @@ while(True):
 			time.sleep(6)
 		conn.close()
 	elif(ch==3):
+		system("clear")
+		print("\033[1;33;48m")
+		ascii_banner = pyfiglet.figlet_format("Upload CSV File")
+		print(ascii_banner)
+		print("\033[1;36;48m")
 		conn = sqlite3.connect("websitedata.db")				
 		host = input(">> Enter CSV FILE Path : ")
 		with open(host,'r') as fin:
@@ -199,6 +214,11 @@ while(True):
 			time.sleep(2)
 		conn.close()		
 	elif(ch==4):
+		system("clear")
+		print("\033[1;33;48m")
+		ascii_banner = pyfiglet.figlet_format("Update Database")
+		print(ascii_banner)
+		print("\033[1;36;48m")
 		o = 1
 		while(o == 1):
 			database()
