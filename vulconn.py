@@ -3,10 +3,21 @@ import urllib.request
 import sqlite3
 import time
 import csv
+import terminal_banner
+import pyfiglet
 from os import system
 from progress.bar import Bar
+def banner():
+	print("\033[1;34;48m* LINUX BASED TOOL V1.0 \033[1;32;48mDeveloped By @Vaibhav Pareek\033[1;31;48m")
+	ascii_banner = pyfiglet.figlet_format("Vulconn !")
+	print(ascii_banner)
+	print("\033[1;32;48m")
+	banner_text = "\n[+] It is a linux based tool,work as a Site Connnectivity Checker. \n[+] It always notifies you when website is ALIVE\n[+] Database utility is included so you can have collection of all the records even if you forgot."
+	my_banner = terminal_banner.Banner(banner_text)
+	print(my_banner)	
+	
 def menu():
-	print("Vulconn")
+	print("\033[1;32;48m")	
 	print("SITE CONNECTIVITY CHECKER")
 	print("GET NOTIFY WHEN WEBSITE IS ACTIVE")
 	print("1. Single URL")
@@ -35,7 +46,8 @@ def database():
 	print("2. Perform Updation in the Database.")
 	print("3. Perform Deletion in the Database ")
 	print("4. To Go Back ")
-bar = Bar('Setting Up database and dependencies', max=20)
+banner()
+bar = Bar('\033[1;36;48mSetting Up database and dependencies', max=20)
 raw = {1:">> Successfully created and connected..",2:">> Checking dependencies..",3:">> Establishing connection.."}
 j=1
 for i in range(20):
@@ -46,21 +58,21 @@ for i in range(20):
     bar.next()
 bar.finish()
 conn = sqlite3.connect("websitedata.db")
-print(">> Successfully created and connected")
+print(" >> Successfully created and connected")
 try:
 	tr = conn.execute("CREATE TABLE webcollect(website TEXT PRIMARY KEY NOT NULL);")
 except sqlite3.OperationalError as e:
-	print(">> MESSAGE : ALREADY TABLE EXIST")
+	print(" >> MESSAGE : ALREADY TABLE EXIST")
 try:
 	s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-	print(">> Socket Established")
+	print(" >> Socket Established")
 except socket.error as err:
-	print(">> Socket can't be Established now ,try again later......")
+	print(" >> Socket can't be Established now ,try again later......")
 port = 80
 conn.close()
 while(True):
 	menu()
-	ch = int(input(">> Choice : "))
+	ch = int(input(" >> Choice : "))
 	if(ch==1):
 		conn = sqlite3.connect("websitedata.db")
 		host = input(">> Enter host name : ")
